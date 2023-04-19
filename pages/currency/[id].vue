@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute()
-const {data} = await useFetch('api/ticker/?id=' + route.params.id)
-const con = data.value[0]
+const { data } = await useFetch('/api/ticker/?id=' + route.params.id)
+const coin = data.value[0]
 </script>
 
 <template>
