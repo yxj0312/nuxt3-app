@@ -1,21 +1,21 @@
 <script setup>
-// const { path } = useRoute()
-// const { data: blogPost } = await useAsyncData(`content-${path}`, () => {
-//   return queryContent().where({ _path: path }).findOne()
-// })
+const { path } = useRoute()
+const { data: blogPost } = await useAsyncData(`content-${path}`, () => {
+  return queryContent().where({ _path: path }).findOne()
+})
 </script>
 <template>
   <main>
     <TheHero>
-      <!-- <template v-slot:default>{{ blogPost.title }}</template> -->
+      <template v-slot:default>{{ blogPost.title }}</template>
 
-      <!-- <template v-slot:subtitle>
+      <template v-slot:subtitle>
         <BlogPostMeta
           :author="blogPost.author"
           :date="blogPost.dates.published"
           color="dark"
         />
-      </template> -->
+      </template>
     </TheHero>
     <div class="container">
       <section class="articles">
